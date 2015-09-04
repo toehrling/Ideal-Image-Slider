@@ -1,0 +1,82 @@
+/*
+ * Ideal Image Slider v1.4.0
+ *
+ * Inspired by Gilbert Pellegrom
+ * https://raw.githubusercontent.com/gilbitron/Ideal-Image-Slider/master/LICENSE
+ *
+ * Copyright (C) 2015 Thomas Oehrling
+ *
+ */
+
+.ideal-image-slider {
+  position: relative;
+}
+
+.iis-slide {
+  display: block;
+  bottom: 0;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+/* Slide effect */
+.iis-effect-slide {
+  .iis-slide {
+    opacity: 0;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+    transform: translateX(0%);
+  }
+
+  .iis-current-slide {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .iis-previous-slide {
+    transform: translateX(-100%);
+  }
+
+  .iis-next-slide {
+    transform: translateX(100%);
+  }
+  &.iis-direction-next .iis-previous-slide,
+  &.iis-direction-previous .iis-next-slide {
+    opacity: 1;
+  }
+}
+
+/* Touch styles */
+.iis-touch-enabled {
+  .iis-slide {
+    z-index: 1;
+  }
+  .iis-current-slide {
+    z-index: 2;
+  }
+  &.iis-is-touching .iis-previous-slide,
+  &.iis-is-touching .iis-next-slide {
+    opacity: 1;
+  }
+}
+
+/* Fade effect */
+.iis-effect-fade {
+  .iis-slide {
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  .iis-current-slide {
+    opacity: 1;
+    z-index: 1;
+  }
+}

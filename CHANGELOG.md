@@ -1,4 +1,9 @@
 # Ideal Image Slider Changelog
+Modified Version 1.4.0 - 2014.09.22 by Thomas Oehrling
+--------------------------
+ * [Changed] just to get HTML-Slides running I modified the Slider quick. The slides should configured by CSS to fit
+in size and layout.
+
 
 Version 1.4.0 - 2014.09.22
 --------------------------

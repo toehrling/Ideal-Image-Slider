@@ -1,5 +1,9 @@
 # Ideal Image Slider
 
+NOTE Thomas Oehrling: just to get HTML-Slides running I modified the Slider quick. The slides should configured by CSS to fit
+in size and layout. I integrated sass to make it more compatible to my projects.
+Copyright stay like described in Files.
+
 The aim behind the Ideal Image Slider is to create a slider which has just the right amount of features,
 with no bloat and be easy to extend so that more features can be added as "extensions". Here are the ideals
 and core features I wanted to include:
