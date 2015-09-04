@@ -9,9 +9,14 @@
  */
 /* line 11, ideal-image-slider.scss */
 .ideal-image-slider {
-  position: relative; }
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute; }
 
-/* line 15, ideal-image-slider.scss */
+/* line 20, ideal-image-slider.scss */
 .iis-slide {
   display: block;
   bottom: 0;
@@ -19,52 +24,54 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
+  /* line 32, ideal-image-slider.scss */
+  .iis-slide img {
+    width: 100%; }
 
 /* Slide effect */
-/* line 31, ideal-image-slider.scss */
+/* line 39, ideal-image-slider.scss */
 .iis-effect-slide .iis-slide {
   opacity: 0;
   transition-property: transform;
   transition-timing-function: ease-out;
   transition-duration: 500ms;
   transform: translateX(0%); }
-/* line 39, ideal-image-slider.scss */
+/* line 47, ideal-image-slider.scss */
 .iis-effect-slide .iis-current-slide {
   opacity: 1;
   z-index: 1; }
-/* line 44, ideal-image-slider.scss */
+/* line 52, ideal-image-slider.scss */
 .iis-effect-slide .iis-previous-slide {
   transform: translateX(-100%); }
-/* line 48, ideal-image-slider.scss */
+/* line 56, ideal-image-slider.scss */
 .iis-effect-slide .iis-next-slide {
   transform: translateX(100%); }
-/* line 52, ideal-image-slider.scss */
+/* line 60, ideal-image-slider.scss */
 .iis-effect-slide.iis-direction-next .iis-previous-slide, .iis-effect-slide.iis-direction-previous .iis-next-slide {
   opacity: 1; }
 
 /* Touch styles */
-/* line 59, ideal-image-slider.scss */
+/* line 67, ideal-image-slider.scss */
 .iis-touch-enabled .iis-slide {
   z-index: 1; }
-/* line 62, ideal-image-slider.scss */
+/* line 70, ideal-image-slider.scss */
 .iis-touch-enabled .iis-current-slide {
   z-index: 2; }
-/* line 66, ideal-image-slider.scss */
+/* line 74, ideal-image-slider.scss */
 .iis-touch-enabled.iis-is-touching .iis-previous-slide, .iis-touch-enabled.iis-is-touching .iis-next-slide {
   opacity: 1; }
 
 /* Fade effect */
-/* line 73, ideal-image-slider.scss */
+/* line 81, ideal-image-slider.scss */
 .iis-effect-fade .iis-slide {
   transition-property: opacity;
   transition-timing-function: ease-in;
   opacity: 0; }
-/* line 78, ideal-image-slider.scss */
+/* line 86, ideal-image-slider.scss */
 .iis-effect-fade .iis-current-slide {
   opacity: 1;
   z-index: 1; }

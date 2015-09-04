@@ -494,9 +494,9 @@ var IdealImageSlider = (function () {
     };
 
     // Set height
-    if (this.settings.height) {
+    /*if (this.settings.height) {
       this._attributes.container.style.height = this.settings.height + 'px';
-    }
+    }*/
 
     // Add classes
     _addClass(sliderEl, this.settings.classes.container);
