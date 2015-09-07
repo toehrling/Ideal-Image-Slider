@@ -75,9 +75,7 @@ var IdealImageSlider = function() {
         return array.push.apply(array, rest);
     };
     var _loadImg = function(slide, callback) {
-        console.log(slide);
         if (!slide.style.backgroundImage && _isType(slide, "HTMLImageElement")) {
-            console.log("load image");
             var img = new Image();
             img.setAttribute("src", slide.getAttribute("data-src"));
             img.onload = function() {
@@ -249,6 +247,7 @@ var IdealImageSlider = function() {
         // Defaults
         this.settings = {
             selector: "",
+            element: null,
             height: 400,
             // Required but can be set by CSS
             interval: 4e3,
@@ -285,8 +284,8 @@ var IdealImageSlider = function() {
         } else if (typeof args === "object") {
             _deepExtend(this.settings, args);
         }
-        // Slider (container) element
-        var sliderEl = document.querySelector(this.settings.selector);
+        // Slider (container) element or element queryed by selector
+        var sliderEl = this.settings.element || document.querySelector(this.settings.selector);
         if (!sliderEl) {
             return null;
         }

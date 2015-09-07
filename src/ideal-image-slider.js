@@ -295,6 +295,7 @@ var IdealImageSlider = (function () {
     // Defaults
     this.settings = {
       selector: '',
+      element: null,
       height: 400, // Required but can be set by CSS
       interval: 4000,
       transitionDuration: 700,
@@ -333,8 +334,8 @@ var IdealImageSlider = (function () {
       _deepExtend(this.settings, args);
     }
 
-    // Slider (container) element
-    var sliderEl = document.querySelector(this.settings.selector);
+    // Slider (container) element or element queryed by selector
+    var sliderEl = this.settings.element || document.querySelector(this.settings.selector);
     if (!sliderEl) {
       return null;
     }

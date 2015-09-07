@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="slider">
+<div id="slider1">
     <div>
         <img src="img/1.jpg" data-src-2x="img/1@2x.jpg" alt="Slide 1"/>
     </div>
@@ -28,11 +28,16 @@
     </div>
 </div>
 
+
 <script src="../ideal-image-slider.min.js"></script>
 <script>
     var slider = new IdealImageSlider.Slider({
-            selector: '#slider'
+            selector: '#slider1'
         });
+    slider.start();
+    var slider = new IdealImageSlider.Slider({
+        element: document.getElementById('slider2')
+    });
     slider.start();
 </script>
 </body>
