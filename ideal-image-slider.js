@@ -75,7 +75,9 @@ var IdealImageSlider = function() {
         return array.push.apply(array, rest);
     };
     var _loadImg = function(slide, callback) {
-        if (!slide.style.backgroundImage) {
+        console.log(slide);
+        if (!slide.style.backgroundImage && _isType(slide, "HTMLImageElement")) {
+            console.log("load image");
             var img = new Image();
             img.setAttribute("src", slide.getAttribute("data-src"));
             img.onload = function() {
@@ -423,9 +425,9 @@ var IdealImageSlider = function() {
             origChildren: origChildren
         };
         // Set height
-        if (this.settings.height) {
-            this._attributes.container.style.height = this.settings.height + "px";
-        }
+        /*if (this.settings.height) {
+      this._attributes.container.style.height = this.settings.height + 'px';
+    }*/
         // Add classes
         _addClass(sliderEl, this.settings.classes.container);
         _addClass(sliderEl, "iis-effect-" + this.settings.effect);

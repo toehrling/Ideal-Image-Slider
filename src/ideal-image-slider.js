@@ -83,7 +83,7 @@ var IdealImageSlider = (function () {
   };
 
   var _loadImg = function (slide, callback) {
-    if (!slide.style.backgroundImage) {
+    if (!slide.style.backgroundImage && _isType(slide, 'HTMLImageElement')) {
       var img = new Image();
       img.setAttribute('src', slide.getAttribute('data-src'));
       img.onload = function () {
