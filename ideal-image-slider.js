@@ -247,7 +247,9 @@ var IdealImageSlider = function() {
         // Defaults
         this.settings = {
             selector: "",
+            // selector
             element: null,
+            // or element
             height: 400,
             // Required but can be set by CSS
             interval: 4e3,
