@@ -30,10 +30,12 @@
 
 
 <script src="../ideal-image-slider.min.js"></script>
+<script src="../extensions/numbered-slides-classes/iis-numberd-slides-classes.js"></script>
 <script>
     var slider = new IdealImageSlider.Slider({
         element: document.getElementById('slider')
     });
+    slider.addNumberedClasses(); // just to test the plugin
     slider.start();
 </script>
 </body>
