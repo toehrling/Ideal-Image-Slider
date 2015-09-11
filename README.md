@@ -121,7 +121,8 @@ in your CSS.
 
 |Setting|Default Value|Description|
 |---|---|---|
-|selector|`''`|CSS selector for the slider|
+|selector|`''`|CSS selector for the slider (selector or element is needed)|
+|element|`null`|dom element for the slider (selector or element is needed)|
 |height|`400`|Height (in px) of the slider|
 |interval|`4000`|Time (in ms) to wait before changing to the next slide|
 |transitionDuration|`700`|Duration (in ms) of animated transition|
